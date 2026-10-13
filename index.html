@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suellen Rodrigues - Personal Trainer | Treino Feminino</title>
+  <meta name="description" content="Consultoria online de treino feminino com Suellen Rodrigues. Hipertrofia, definição, glúteos e postura com um plano feito para a sua rotina real." />
+  <meta property="og:title" content="Suellen Rodrigues - Personal Trainer" />
+  <meta property="og:description" content="Treino feminino com método, estratégia e acompanhamento de perto. Consultoria online em todo o Brasil." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="banner.png" />
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            creme: '#FBF8F6',      // fundo off-white
+            areia: '#F3ECE8',      // fundo de seções alternadas
+            tinta: '#2B2326',      // texto principal
+            rose: {
+              50: '#FBF1F1',
+              100: '#F5E1E1',
+              200: '#EBC6C7',
+              400: '#C98B8F',
+              500: '#B8737A',      // cor de destaque
+              600: '#9E5C63',
+              700: '#7E474D'
+            },
+            ouro: '#B89B6A'        // detalhe dourado
+          },
+          fontFamily: {
+            serif: ['"DM Serif Display"', 'serif'],
+            sans: ['"Instrument Sans"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .faq-icon { transform: rotate(45deg); }
+    .img-box { background: linear-gradient(135deg, #F5E1E1, #F3ECE8); }
+  </style>
+</head>
+
+<body class="bg-creme font-sans text-tinta antialiased">
+
+  <!-- ============ HEADER / NAVBAR ============ -->
+  <header id="header" class="fixed inset-x-0 top-0 z-50 bg-creme/90 backdrop-blur transition-shadow">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
+      <a href="#banner" class="font-serif text-2xl text-tinta">Suellen <span class="text-rose-500">Rodrigues</span></a>
+
+      <ul class="hidden items-center gap-6 text-sm font-medium lg:flex">
+        <li><a href="#banner" class="hover:text-rose-500">Início</a></li>
+        <li><a href="#sobre" class="hover:text-rose-500">Sobre mim</a></li>
+        <li><a href="#resultados" class="hover:text-rose-500">Resultados</a></li>
+        <li><a href="#comofunciona" class="hover:text-rose-500">Como funciona</a></li>
+        <li><a href="#beneficios" class="hover:text-rose-500">Benefícios</a></li>
+        <li><a href="#avaliacoes" class="hover:text-rose-500">Avaliações</a></li>
+        <li><a href="#planos" class="hover:text-rose-500">Planos</a></li>
+        <li><a href="#faq" class="hover:text-rose-500">Dúvidas</a></li>
+        <li><a href="#contato" class="hover:text-rose-500">Contato</a></li>
+      </ul>
+
+      <a href="https://wa.me/5561999999999?text=Ol%C3%A1%2C%20Suellen!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20a%20consultoria."
+         target="_blank" rel="noopener"
+         class="hidden rounded-full bg-rose-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-rose-600 lg:inline-block">
+        Falar no WhatsApp
+      </a>
+
+      <button id="menuBtn" aria-label="Abrir menu" aria-expanded="false" class="rounded-lg p-2 text-2xl lg:hidden">☰</button>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div id="mobileMenu" class="hidden border-t border-rose-100 bg-creme px-4 pb-6 lg:hidden">
+      <ul class="flex flex-col gap-1 pt-3 text-base font-medium">
+        <li><a href="#banner" class="block rounded-lg px-3 py-2 hover:bg-rose-50">Início</a></li>
+        <li><a href="#sobre" class="block rounded-lg px-3 py-2 hover:bg-rose-50">Sobre mim</a></li>
+        <li><a href="#resultados" class="block rounded-lg px-3 py-2 hover:bg-rose-50">Resultados</a></li>
+        <li><a href="#comofunciona" class="block rounded-lg px-3 py-2 hover:bg-rose-50">Como funciona</a></li>
+        <li><a href="#beneficios" class="block rounded-lg px-3 py-2 hover:bg-rose-50">Benefícios</a></li>
+        <li><a href="#avaliacoes" class="block rounded-lg px-3 py-2 hover:bg-rose-50">Avaliações</a></li>
+        <li><a href="#planos" class="block rounded-lg px-3 py-2 hover:bg-rose-50">Planos</a></li>
+        <li><a href="#faq" class="block rounded-lg px-3 py-2 hover:bg-rose-50">Dúvidas</a></li>
+        <li><a href="#contato" class="block rounded-lg px-3 py-2 hover:bg-rose-50">Contato</a></li>
+      </ul>
+      <a href="https://wa.me/5561999999999?text=Ol%C3%A1%2C%20Suellen!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20a%20consultoria."
+         target="_blank" rel="noopener"
+         class="mt-4 block rounded-full bg-rose-500 px-5 py-3 text-center font-semibold text-white">
+        Falar no WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="banner" class="pt-28 pb-16 sm:pt-32 lg:pb-24">
+      <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16">
+        <div class="text-center lg:text-left">
+          <span class="inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-rose-600">
+            <span class="h-1.5 w-1.5 rounded-full bg-ouro"></span>
+            Especialista em Treino Feminino
+          </span>
+          <h1 class="mt-6 font-serif text-4xl leading-tight sm:text-5xl lg:text-6xl">
+            Suellen Rodrigues
+          </h1>
+          <p class="mt-4 font-serif text-2xl italic leading-snug text-rose-600 sm:text-3xl">
+            Corpo mais forte, postura mais bonita e um treino que cabe na sua rotina real.
+          </p>
+          <p class="mx-auto mt-5 max-w-xl text-base leading-relaxed text-tinta/75 lg:mx-0">
+            Consultoria online para mulheres que querem definir, ganhar massa, fortalecer glúteos e pernas
+            e se sentir bem no próprio corpo, com método e acompanhamento de perto.
+          </p>
+          <div class="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
+            <a href="#planos" class="w-full rounded-full bg-rose-500 px-8 py-4 text-center font-semibold text-white shadow-lg shadow-rose-500/20 transition hover:bg-rose-600 sm:w-auto">
+              Quero minha transformação
+            </a>
+            <a href="#resultados" class="w-full rounded-full border border-tinta/15 px-8 py-4 text-center font-semibold transition hover:border-rose-400 hover:text-rose-600 sm:w-auto">
+              Ver resultados
+            </a>
+          </div>
+        </div>
+
+        <div class="relative mx-auto w-full max-w-md lg:max-w-none">
+          <div class="absolute -right-3 -top-3 hidden h-full w-full rounded-[2rem] border border-ouro/40 sm:block"></div>
+          <div class="img-box relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-xl">
+            <!-- Foto com zoom centralizado na Suellen (remove a pessoa ao fundo, à direita) -->
+            <img src="hero-sullen.jpg" alt="Suellen Rodrigues, Personal Trainer especialista em treino feminino"
+                 fetchpriority="high"
+                 class="h-full w-full object-cover"
+                 style="transform: scale(1.6); transform-origin: 40% 38%;" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NÚMEROS DE IMPACTO ============ -->
+    <section class="bg-tinta py-12 text-white">
+      <div class="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-4 text-center sm:px-6 lg:grid-cols-4">
+        <div>
+          <p class="font-serif text-4xl text-rose-200 sm:text-5xl">+150</p>
+          <p class="mt-2 text-sm text-white/70">alunas transformadas</p>
+        </div>
+        <div>
+          <p class="font-serif text-4xl text-rose-200 sm:text-5xl">+5</p>
+          <p class="mt-2 text-sm text-white/70">anos de experiência</p>
+        </div>
+        <div>
+          <p class="font-serif text-4xl text-rose-200 sm:text-5xl">100%</p>
+          <p class="mt-2 text-sm text-white/70">treinos individualizados</p>
+        </div>
+        <div>
+          <p class="font-serif text-4xl text-rose-200 sm:text-5xl">4.9★</p>
+          <p class="mt-2 text-sm text-white/70">avaliação das alunas</p>
+        </div>
+      </div>
+      <p class="mx-auto mt-8 max-w-2xl px-4 text-center text-sm text-white/60">
+        Resultados construídos com ciência do treinamento e a prática real de quem entende a rotina da mulher.
+      </p>
+    </section>
+
+    <!-- ============ SOBRE MIM ============ -->
+    <section id="sobre" class="py-20 sm:py-24">
+      <div class="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2">
+        <div class="img-box mx-auto aspect-square w-full max-w-md overflow-hidden rounded-[2rem] shadow-lg lg:order-1">
+          <img src="foto-suellen.png" alt="Suellen Rodrigues, Personal Trainer" loading="lazy" class="h-full w-full object-cover" />
+        </div>
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-widest text-ouro">Prazer, eu sou a Suellen</p>
+          <h2 class="mt-3 font-serif text-3xl sm:text-4xl">Sobre mim</h2>
+          <div class="mt-6 space-y-4 leading-relaxed text-tinta/80">
+            <p>
+              Sou <strong class="text-tinta">Suellen Rodrigues</strong>, Personal Trainer especializada em treino feminino.
+              Meu trabalho é ajudar mulheres a conquistarem um corpo mais forte, definido e saudável, sem fórmulas prontas
+              e sem precisar viver para a academia.
+            </p>
+            <p>
+              Ao longo da minha trajetória, percebi que a maioria das mulheres não falha por falta de vontade, e sim por
+              seguir treinos que não respeitam sua rotina, seu ciclo, suas dores e seus objetivos. Por isso, minha
+              metodologia une ciência do exercício, periodização estratégica e um olhar atento para postura e
+              qualidade de movimento.
+            </p>
+            <p>
+              Hoje atendo alunas em todo o Brasil pela consultoria online, com foco em hipertrofia, definição,
+              glúteos e coxas, correção postural e, principalmente, constância.
+            </p>
+          </div>
+          <ul class="mt-8 flex flex-wrap gap-2 text-sm">
+            <li class="rounded-full bg-rose-50 px-4 py-2 text-rose-700">Hipertrofia feminina</li>
+            <li class="rounded-full bg-rose-50 px-4 py-2 text-rose-700">Glúteos e coxas</li>
+            <li class="rounded-full bg-rose-50 px-4 py-2 text-rose-700">Correção postural</li>
+            <li class="rounded-full bg-rose-50 px-4 py-2 text-rose-700">Definição</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESULTADOS REAIS ============ -->
+    <section id="resultados" class="bg-areia py-20 sm:py-24">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="font-serif text-3xl sm:text-4xl">Resultados reais</h2>
+          <p class="mt-4 text-tinta/70">Transformações de alunas acompanhadas na consultoria online.</p>
+        </div>
+
+        <div class="mt-12 grid gap-8 md:grid-cols-2">
+          <!-- Resultado 1 -->
+          <article class="rounded-3xl bg-white p-4 shadow-sm sm:p-5">
+            <div class="grid grid-cols-2 gap-3">
+              <figure>
+                <div class="img-box aspect-[3/4] overflow-hidden rounded-2xl">
+                  <img src="resultado1-antes.png" alt="Aluna antes da consultoria" loading="lazy" class="h-full w-full object-cover" />
+                </div>
+                <figcaption class="mt-2 text-center text-xs font-semibold uppercase tracking-wider text-tinta/50">Antes</figcaption>
+              </figure>
+              <figure>
+                <div class="img-box aspect-[3/4] overflow-hidden rounded-2xl">
+                  <img src="resultado1-depois.png" alt="Aluna depois da consultoria" loading="lazy" class="h-full w-full object-cover" />
+                </div>
+                <figcaption class="mt-2 text-center text-xs font-semibold uppercase tracking-wider text-rose-600">Depois</figcaption>
+              </figure>
+            </div>
+            <p class="mt-4 text-center text-sm text-tinta/75">
+              <strong class="text-tinta">5 meses de consultoria online</strong> — foco em glúteos, coxas e definição.
+            </p>
+          </article>
+
+          <!-- Resultado 2 -->
+          <article class="rounded-3xl bg-white p-4 shadow-sm sm:p-5">
+            <div class="grid grid-cols-2 gap-3">
+              <figure>
+                <div class="img-box aspect-[3/4] overflow-hidden rounded-2xl">
+                  <img src="resultado2-antes.png" alt="Aluna antes da consultoria" loading="lazy" class="h-full w-full object-cover" />
+                </div>
+                <figcaption class="mt-2 text-center text-xs font-semibold uppercase tracking-wider text-tinta/50">Antes</figcaption>
+              </figure>
+              <figure>
+                <div class="img-box aspect-[3/4] overflow-hidden rounded-2xl">
+                  <img src="resultado2-depois.png" alt="Aluna depois da consultoria" loading="lazy" class="h-full w-full object-cover" />
+                </div>
+                <figcaption class="mt-2 text-center text-xs font-semibold uppercase tracking-wider text-rose-600">Depois</figcaption>
+              </figure>
+            </div>
+            <p class="mt-4 text-center text-sm text-tinta/75">
+              <strong class="text-tinta">6 meses de consultoria online</strong> — hipertrofia e correção postural.
+            </p>
+          </article>
+        </div>
+
+        <p class="mx-auto mt-8 max-w-2xl text-center text-xs leading-relaxed text-tinta/55">
+          Fotos publicadas com autorização das alunas. Resultados variam de pessoa para pessoa, de acordo com adesão
+          ao plano, histórico individual e rotina.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ COMO FUNCIONA ============ -->
+    <section id="comofunciona" class="py-20 sm:py-24">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="font-serif text-3xl sm:text-4xl">Como funciona a consultoria online</h2>
+          <p class="mt-4 text-tinta/70">Um processo simples, direto e 100% adaptado à sua rotina de mulher real.</p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <div class="rounded-3xl border border-rose-100 bg-white p-8 transition hover:-translate-y-1 hover:shadow-lg">
+            <span class="font-serif text-5xl text-rose-200">01</span>
+            <h3 class="mt-4 text-xl font-semibold">Anamnese completa</h3>
+            <p class="mt-3 leading-relaxed text-tinta/70">
+              Entendemos seu histórico, objetivos, rotina, postura, ciclo e possíveis dores ou limitações.
+            </p>
+          </div>
+          <div class="rounded-3xl border border-rose-100 bg-white p-8 transition hover:-translate-y-1 hover:shadow-lg">
+            <span class="font-serif text-5xl text-rose-200">02</span>
+            <h3 class="mt-4 text-xl font-semibold">Plano personalizado</h3>
+            <p class="mt-3 leading-relaxed text-tinta/70">
+              Treino montado sob medida para o seu corpo, seu tempo disponível e o local onde você treina.
+            </p>
+          </div>
+          <div class="rounded-3xl border border-rose-100 bg-white p-8 transition hover:-translate-y-1 hover:shadow-lg">
+            <span class="font-serif text-5xl text-rose-200">03</span>
+            <h3 class="mt-4 text-xl font-semibold">Acompanhamento contínuo</h3>
+            <p class="mt-3 leading-relaxed text-tinta/70">
+              Ajustes periódicos, correção de execução por vídeo e suporte direto para você não desistir no meio do caminho.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BENEFÍCIOS ============ -->
+    <section id="beneficios" class="bg-areia py-20 sm:py-24">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="font-serif text-3xl sm:text-4xl">Por que treinar com uma Personal?</h2>
+          <p class="mt-4 text-tinta/70">Porque o corpo feminino merece um treino pensado para ele, e não uma planilha genérica.</p>
+        </div>
+
+        <div class="mt-12 grid gap-6 sm:grid-cols-2">
+          <div class="flex gap-4 rounded-3xl bg-white p-6 shadow-sm">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-rose-50 text-2xl">🎯</span>
+            <div>
+              <h3 class="font-semibold">Treinos sob medida para mulheres</h3>
+              <p class="mt-2 text-sm leading-relaxed text-tinta/70">Nada de copiar treino de rede social: cada estímulo é planejado para o seu objetivo, seja glúteo, definição ou ganho de massa.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 rounded-3xl bg-white p-6 shadow-sm">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-rose-50 text-2xl">🧘‍♀️</span>
+            <div>
+              <h3 class="font-semibold">Postura e técnica corretas</h3>
+              <p class="mt-2 text-sm leading-relaxed text-tinta/70">Menos dores nas costas e nos joelhos, mais segurança na execução e um corpo mais alinhado no dia a dia.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 rounded-3xl bg-white p-6 shadow-sm">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-rose-50 text-2xl">⏱️</span>
+            <div>
+              <h3 class="font-semibold">Feito para a sua rotina real</h3>
+              <p class="mt-2 text-sm leading-relaxed text-tinta/70">Trabalho, casa, filhos, faculdade: o plano se adapta ao tempo que você tem, sem culpa e sem treinos intermináveis.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 rounded-3xl bg-white p-6 shadow-sm">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-rose-50 text-2xl">💪</span>
+            <div>
+              <h3 class="font-semibold">Motivação e resultados seguros</h3>
+              <p class="mt-2 text-sm leading-relaxed text-tinta/70">Acompanhamento próximo que mantém você constante, com evolução real e a confiança de estar no caminho certo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AVALIAÇÕES ============ -->
+    <section id="avaliacoes" class="py-20 sm:py-24">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="font-serif text-3xl sm:text-4xl">Avaliações de Alunas</h2>
+          <p class="mt-4 text-tinta/70">O que dizem as mulheres que já transformaram seus treinos e sua relação com o próprio corpo.</p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <figure class="flex flex-col rounded-3xl border border-rose-100 bg-white p-7 shadow-sm">
+            <p class="text-lg tracking-widest text-ouro" aria-label="5 estrelas">★★★★★</p>
+            <blockquote class="mt-4 flex-1 leading-relaxed text-tinta/80">
+              "Pela primeira vez consegui manter a constância. A Suellen montou um treino que cabe na minha rotina e meus glúteos nunca estiveram tão bonitos!"
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-3">
+              <span class="flex h-11 w-11 items-center justify-center rounded-full bg-rose-100 font-semibold text-rose-700">CM</span>
+              <span>
+                <span class="block font-semibold">Camila Martins</span>
+                <span class="block text-sm text-tinta/55">Advogada</span>
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="flex flex-col rounded-3xl border border-rose-100 bg-white p-7 shadow-sm">
+            <p class="text-lg tracking-widest text-ouro" aria-label="5 estrelas">★★★★★</p>
+            <blockquote class="mt-4 flex-1 leading-relaxed text-tinta/80">
+              "Eu sofria com dor nas costas e postura curvada. Hoje treino sem dor, estou mais forte e me sinto muito mais confiante."
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-3">
+              <span class="flex h-11 w-11 items-center justify-center rounded-full bg-rose-100 font-semibold text-rose-700">JA</span>
+              <span>
+                <span class="block font-semibold">Juliana Alves</span>
+                <span class="block text-sm text-tinta/55">Professora</span>
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="flex flex-col rounded-3xl border border-rose-100 bg-white p-7 shadow-sm">
+            <p class="text-lg tracking-widest text-ouro" aria-label="5 estrelas">★★★★★</p>
+            <blockquote class="mt-4 flex-1 leading-relaxed text-tinta/80">
+              "Mãe de dois e sem tempo nenhum. Com os treinos da Suellen voltei a me reconhecer no espelho. Atenciosa e muito profissional!"
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-3">
+              <span class="flex h-11 w-11 items-center justify-center rounded-full bg-rose-100 font-semibold text-rose-700">PS</span>
+              <span>
+                <span class="block font-semibold">Patrícia Souza</span>
+                <span class="block text-sm text-tinta/55">Empresária</span>
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PLANOS ============ -->
+    <section id="planos" class="bg-areia py-20 sm:py-24">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="text-sm font-semibold uppercase tracking-widest text-ouro">Invista em você</p>
+          <h2 class="mt-3 font-serif text-3xl sm:text-4xl">Planos de consultoria</h2>
+          <p class="mt-4 text-tinta/70">Escolha o plano ideal e fale direto com a Suellen pelo WhatsApp para confirmar sua vaga e a forma de pagamento.</p>
+        </div>
+
+        <div class="mt-14 grid items-stretch gap-8 lg:grid-cols-3">
+          <!-- Mensal -->
+          <div class="flex flex-col rounded-3xl bg-white p-8 shadow-sm">
+            <h3 class="text-lg font-semibold">Plano Mensal</h3>
+            <p class="mt-4"><span class="font-serif text-4xl">R$ 197</span><span class="text-tinta/60">/mês</span></p>
+            <ul class="mt-6 flex-1 space-y-3 text-sm text-tinta/80">
+              <li class="flex gap-2"><span class="text-rose-500">✓</span> Treino personalizado</li>
+              <li class="flex gap-2"><span class="text-rose-500">✓</span> Ajustes mensais</li>
+              <li class="flex gap-2"><span class="text-rose-500">✓</span> Suporte via WhatsApp</li>
+            </ul>
+            <a href="https://wa.me/5561999999999?text=Ol%C3%A1%2C%20Suellen!%20Quero%20contratar%20o%20Plano%20Mensal%20(R%24197%2Fm%C3%AAs)."
+               target="_blank" rel="noopener"
+               class="mt-8 block rounded-full border-2 border-rose-500 py-3.5 text-center font-semibold text-rose-600 transition hover:bg-rose-500 hover:text-white">
+              Quero esse plano
+            </a>
+          </div>
+
+          <!-- Trimestral (destaque) -->
+          <div class="relative flex flex-col rounded-3xl bg-tinta p-8 text-white shadow-2xl lg:-my-4 lg:py-12">
+            <span class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-ouro px-5 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
+              Mais popular
+            </span>
+            <h3 class="text-lg font-semibold">Plano Trimestral</h3>
+            <p class="mt-4"><span class="font-serif text-4xl text-rose-200">R$ 497</span><span class="text-white/60">/3 meses</span></p>
+            <ul class="mt-6 flex-1 space-y-3 text-sm text-white/85">
+              <li class="flex gap-2"><span class="text-rose-200">✓</span> Treino personalizado</li>
+              <li class="flex gap-2"><span class="text-rose-200">✓</span> Ajustes quinzenais</li>
+              <li class="flex gap-2"><span class="text-rose-200">✓</span> Suporte prioritário</li>
+              <li class="flex gap-2"><span class="text-rose-200">✓</span> Avaliação de evolução e postura</li>
+            </ul>
+            <a href="https://wa.me/5561999999999?text=Ol%C3%A1%2C%20Suellen!%20Quero%20contratar%20o%20Plano%20Trimestral%20(R%24497%2F3%20meses)."
+               target="_blank" rel="noopener"
+               class="mt-8 block rounded-full bg-rose-500 py-3.5 text-center font-semibold text-white transition hover:bg-rose-400">
+              Quero esse plano
+            </a>
+          </div>
+
+          <!-- Semestral -->
+          <div class="flex flex-col rounded-3xl bg-white p-8 shadow-sm">
+            <h3 class="text-lg font-semibold">Plano Semestral</h3>
+            <p class="mt-4"><span class="font-serif text-4xl">R$ 897</span><span class="text-tinta/60">/6 meses</span></p>
+            <ul class="mt-6 flex-1 space-y-3 text-sm text-tinta/80">
+              <li class="flex gap-2"><span class="text-rose-500">✓</span> Treino personalizado</li>
+              <li class="flex gap-2"><span class="text-rose-500">✓</span> Ajustes semanais</li>
+              <li class="flex gap-2"><span class="text-rose-500">✓</span> Suporte prioritário</li>
+              <li class="flex gap-2"><span class="text-rose-500">✓</span> Avaliação de evolução e postura</li>
+              <li class="flex gap-2"><span class="text-rose-500">✓</span> Maior economia</li>
+            </ul>
+            <a href="https://wa.me/5561999999999?text=Ol%C3%A1%2C%20Suellen!%20Quero%20contratar%20o%20Plano%20Semestral%20(R%24897%2F6%20meses)."
+               target="_blank" rel="noopener"
+               class="mt-8 block rounded-full border-2 border-rose-500 py-3.5 text-center font-semibold text-rose-600 transition hover:bg-rose-500 hover:text-white">
+              Quero esse plano
+            </a>
+          </div>
+        </div>
+
+        <p class="mx-auto mt-10 max-w-2xl text-center text-sm text-tinta/60">
+          Ao clicar em "Quero esse plano", você fala direto com a Suellen pelo WhatsApp para confirmar disponibilidade,
+          tirar dúvidas e combinar a forma de pagamento.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="py-20 sm:py-24">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6">
+        <h2 class="text-center font-serif text-3xl sm:text-4xl">Perguntas frequentes</h2>
+
+        <div class="mt-12 space-y-4">
+          <details class="group rounded-2xl border border-rose-100 bg-white p-5 open:shadow-sm">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 font-semibold">
+              Preciso ter equipamentos em casa para a consultoria online?
+              <span class="faq-icon text-2xl leading-none text-rose-500 transition-transform">+</span>
+            </summary>
+            <p class="mt-3 leading-relaxed text-tinta/70">Não necessariamente. O plano é montado de acordo com o que você tem disponível, seja em casa, ao ar livre ou na academia.</p>
+          </details>
+
+          <details class="group rounded-2xl border border-rose-100 bg-white p-5 open:shadow-sm">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 font-semibold">
+              A consultoria funciona para iniciantes?
+              <span class="faq-icon text-2xl leading-none text-rose-500 transition-transform">+</span>
+            </summary>
+            <p class="mt-3 leading-relaxed text-tinta/70">Sim! O treino é adaptado ao seu nível atual, seja você iniciante, voltando depois de uma pausa ou já experiente.</p>
+          </details>
+
+          <details class="group rounded-2xl border border-rose-100 bg-white p-5 open:shadow-sm">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 font-semibold">
+              Vou ficar "masculinizada" treinando com peso?
+              <span class="faq-icon text-2xl leading-none text-rose-500 transition-transform">+</span>
+            </summary>
+            <p class="mt-3 leading-relaxed text-tinta/70">Não. O treino de força é o que deixa o corpo feminino mais firme, definido e com curvas. O plano é ajustado ao resultado estético que você busca.</p>
+          </details>
+
+          <details class="group rounded-2xl border border-rose-100 bg-white p-5 open:shadow-sm">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 font-semibold">
+              Em quanto tempo eu vejo resultados?
+              <span class="faq-icon text-2xl leading-none text-rose-500 transition-transform">+</span>
+            </summary>
+            <p class="mt-3 leading-relaxed text-tinta/70">Os primeiros sinais costumam aparecer entre 4 e 8 semanas, mas isso varia de acordo com objetivo, rotina e adesão ao plano.</p>
+          </details>
+
+          <details class="group rounded-2xl border border-rose-100 bg-white p-5 open:shadow-sm">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 font-semibold">
+              Tenho dores na coluna ou nos joelhos. Posso treinar?
+              <span class="faq-icon text-2xl leading-none text-rose-500 transition-transform">+</span>
+            </summary>
+            <p class="mt-3 leading-relaxed text-tinta/70">Na anamnese avaliamos seu histórico e limitações para montar um treino seguro, com foco em fortalecimento e postura. Em casos específicos, pode ser necessária liberação médica.</p>
+          </details>
+
+          <details class="group rounded-2xl border border-rose-100 bg-white p-5 open:shadow-sm">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 font-semibold">
+              Como funciona o acompanhamento e os ajustes do treino?
+              <span class="faq-icon text-2xl leading-none text-rose-500 transition-transform">+</span>
+            </summary>
+            <p class="mt-3 leading-relaxed text-tinta/70">O plano é revisado periodicamente com base na sua evolução, e você tem suporte direto para tirar dúvidas e enviar vídeos de execução.</p>
+          </details>
+
+          <details class="group rounded-2xl border border-rose-100 bg-white p-5 open:shadow-sm">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 font-semibold">
+              Como funciona o pagamento dos planos?
+              <span class="faq-icon text-2xl leading-none text-rose-500 transition-transform">+</span>
+            </summary>
+            <p class="mt-3 leading-relaxed text-tinta/70">Ao escolher um plano, você é direcionada para o WhatsApp da Suellen, onde vocês combinam a forma de pagamento (PIX, cartão ou outro meio) e a data de início.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section id="contato" class="bg-areia py-20 sm:py-24">
+      <div class="mx-auto max-w-xl px-4 sm:px-6">
+        <div class="text-center">
+          <h2 class="font-serif text-3xl sm:text-4xl">Ainda com dúvidas sobre qual plano escolher?</h2>
+          <p class="mt-4 text-tinta/70">Preencha o formulário e fale direto com a Suellen pelo WhatsApp.</p>
+        </div>
+
+        <form id="contatoForm" class="mt-10 space-y-5 rounded-3xl bg-white p-6 shadow-sm sm:p-8">
+          <div>
+            <label for="nome" class="mb-1.5 block text-sm font-semibold">Nome</label>
+            <input id="nome" name="nome" type="text" required placeholder="Seu nome"
+                   class="w-full rounded-xl border border-rose-100 bg-creme px-4 py-3 outline-none focus:border-rose-400 focus:ring-2 focus:ring-rose-100" />
+          </div>
+          <div>
+            <label for="whats" class="mb-1.5 block text-sm font-semibold">WhatsApp</label>
+            <input id="whats" name="whats" type="tel" required placeholder="(61) 99999-9999"
+                   class="w-full rounded-xl border border-rose-100 bg-creme px-4 py-3 outline-none focus:border-rose-400 focus:ring-2 focus:ring-rose-100" />
+          </div>
+          <div>
+            <label for="objetivo" class="mb-1.5 block text-sm font-semibold">Seu principal objetivo</label>
+            <select id="objetivo" name="objetivo" required
+                    class="w-full rounded-xl border border-rose-100 bg-creme px-4 py-3 outline-none focus:border-rose-400 focus:ring-2 focus:ring-rose-100">
+              <option value="">Selecione...</option>
+              <option>Glúteos e coxas</option>
+              <option>Hipertrofia / ganho de massa</option>
+              <option>Definição e emagrecimento</option>
+              <option>Correção postural</option>
+              <option>Saúde e qualidade de vida</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <button type="submit" class="w-full rounded-full bg-rose-500 py-4 font-semibold text-white transition hover:bg-rose-600">
+            Enviar e falar no WhatsApp
+          </button>
+          <p class="text-center text-xs text-tinta/55">Seus dados são usados apenas para este contato e não são compartilhados com terceiros.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="bg-tinta py-12 text-white/80">
+    <div class="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 text-center sm:px-6 md:flex-row md:justify-between md:text-left">
+      <div>
+        <p class="font-serif text-2xl text-white">Suellen <span class="text-rose-200">Rodrigues</span></p>
+        <p class="mt-1 text-sm text-white/60">Personal Trainer · Especialista em Treino Feminino</p>
+      </div>
+      <div class="flex flex-col items-center gap-3 md:items-end">
+        <p class="text-sm">Siga-me nas redes sociais:</p>
+        <div class="flex gap-3">
+          <a href="https://instagram.com/seuusuario" target="_blank" rel="noopener" aria-label="Instagram"
+             class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition hover:bg-rose-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 4.9a4.9 4.9 0 100 9.8 4.9 4.9 0 000-9.8zm0 8.1a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zm5.1-9.4a1.2 1.2 0 100 2.3 1.2 1.2 0 000-2.3z"/></svg>
+          </a>
+          <a href="https://wa.me/5561999999999" target="_blank" rel="noopener" aria-label="WhatsApp"
+             class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition hover:bg-rose-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1112 21.8zm0-21.6A11.8 11.8 0 001.8 18l-1.7 6 6.2-1.6A11.8 11.8 0 1012 .2z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <p class="mt-10 border-t border-white/10 pt-6 text-center text-xs text-white/50">
+      © <span id="ano">2026</span> Suellen Rodrigues - Todos os direitos reservados.
+    </p>
+  </footer>
+
+  <!-- ============ BOTÃO FLUTUANTE WHATSAPP ============ -->
+  <a href="https://wa.me/5561999999999?text=Ol%C3%A1%2C%20Suellen!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20a%20consultoria."
+     target="_blank" rel="noopener" aria-label="Falar com a Suellen no WhatsApp"
+     class="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition hover:scale-110">
+    <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#25D366] opacity-30"></span>
+    <svg class="relative h-7 w-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1112 21.8zm0-21.6A11.8 11.8 0 001.8 18l-1.7 6 6.2-1.6A11.8 11.8 0 1012 .2z"/></svg>
+  </a>
+
+  <!-- ============ JAVASCRIPT ============ -->
+  <script>
+    // Número de WhatsApp usado no formulário de contato (mesmo dos links acima)
+    const WHATSAPP = '5561999999999';
+
+    // Menu mobile
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      const aberto = mobileMenu.classList.toggle('hidden') === false;
+      menuBtn.setAttribute('aria-expanded', aberto);
+      menuBtn.textContent = aberto ? '✕' : '☰';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.textContent = '☰';
+      });
+    });
+
+    // Sombra no header ao rolar
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('shadow-md', window.scrollY > 10);
+    });
+
+    // FAQ: mantém apenas uma pergunta aberta por vez
+    const faqs = document.querySelectorAll('#faq details');
+    faqs.forEach(item => {
+      item.addEventListener('toggle', () => {
+        if (item.open) faqs.forEach(outro => { if (outro !== item) outro.open = false; });
+      });
+    });
+
+    // Formulário -> WhatsApp
+    document.getElementById('contatoForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value.trim();
+      const whats = document.getElementById('whats').value.trim();
+      const objetivo = document.getElementById('objetivo').value;
+      const msg = `Olá, Suellen! Meu nome é ${nome}. Meu WhatsApp é ${whats} e meu principal objetivo é: ${objetivo}. Gostaria de ajuda para escolher o melhor plano.`;
+      window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank');
+    });
+
+    // Ano automático no rodapé
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
